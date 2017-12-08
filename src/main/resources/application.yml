@@ -1,0 +1,22 @@
+hibernate:
+    connection:
+        autocommit: true
+spring:
+    datasource:
+        driver-class-name: org.sqlite.JDBC
+        url: jdbc:sqlite:addressbook.db
+    jpa:
+        database-platform: ru.javabegin.training.javafx.dialect.SQLiteDialect
+        properties:
+            hibernate:
+                current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        show-sql: true
+
+
+logging:
+    file: c:\tmp\logs\app.log
+
+    level:
+        ROOT: warn
+        org.springframework: INFO
+        org.hibernate: INFO
